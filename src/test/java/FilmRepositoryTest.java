@@ -1,6 +1,6 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import ru.netology.domen.FilmItem;
+import ru.netology.domain.FilmItem;
 import ru.netology.repository.FilmRepository;
 
 public class FilmRepositoryTest {

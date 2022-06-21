@@ -1,4 +1,5 @@
-package ru.netology.domen;
+package ru.netology.domain;
+
 public class FilmItem {
     private int id;
     private String filmName;

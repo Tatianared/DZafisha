@@ -1,8 +1,9 @@
 package ru.netology.repository;
 
-import ru.netology.domen.FilmItem;
+import ru.netology.domain.FilmItem;
 
 public class FilmRepository {
+
     private FilmItem[] items = new FilmItem[0];
     private int countFilm = 10;
 
@@ -40,19 +41,24 @@ public class FilmRepository {
         countFilm = size;
     }
 
-    public FilmItem[] items(){
-        FilmItem[] all = getItems();
+
+    public FilmItem[] items() {
+
         int resultLength;
         if (items.length < countFilm) {
             resultLength = items.length;
         } else {
             resultLength = countFilm;
         }
-FilmItem[] result = new FilmItem[resultLength];
-        for (int i =0; i < items.length; i++) {
-            result[i] = all[items.length -1-i];
+        FilmItem[] findLast = getItems();
+        FilmItem[] result = new FilmItem[resultLength];
+        for (int i = 0; i < resultLength; i++) {
+            int item = items.length - 1 - i;
+            result[i] = items[item];
+
         }
         return result;
     }
+
 
 }
